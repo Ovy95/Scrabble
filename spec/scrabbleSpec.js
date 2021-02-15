@@ -16,47 +16,24 @@ describe("scrabble", function() {
         expect(scrabble.get_score("AEIOULNRST")).toEqual(10);
       })
   })
-  describe('Tests for two point values', function() {
-    it ("1) returns a single letter D ",function() {
-      expect(scrabble.get_score("D")).toEqual(2);
-    })
-    it ("2) returns a Double letter GG ",function() {
-      expect(scrabble.get_score("GG")).toEqual(4);
-    })
-    it ("3) returns 4  DG",function() {
-      expect(scrabble.get_score("DG")).toEqual(4);
-    })
-})
-describe('Returns the right score for when having different tile values', function() {
-  it ("1) DA returns a value of 3 ",function() {
-    expect(scrabble.get_score("DA")).toEqual(3);
-  })
-  it ("2) DAD returns a value of 5",function() {
-    expect(scrabble.get_score("DAD")).toEqual(5);
-  })
-  it ("3) DEED returns a value of 6",function() {
-    expect(scrabble.get_score("DEED")).toEqual(6);
-  })
-  it ("4) DAGGER returns a value of 9",function() {
-    expect(scrabble.get_score("DAGGER")).toEqual(9);
-  })
+  
 
+    describe('Returns the right score for when having different tile values', function() {
+      it ("1) Returns the correct value of one tile of each ",function() {
+        expect(scrabble.get_score("ADBFKJQ")).toEqual(33);
+      })
+      it ("2) Returns 6 for 'street' ",function() {
+        expect(scrabble.get_score("street")).toEqual(6);
+      })
+      it ("3) Returns 22  'quirky' ",function() {
+        expect(scrabble.get_score("quirky")).toEqual(22);
+      })
+      it ("4) Returns 41  for 'OXYPHENBUTAZONE'",function() {
+        expect(scrabble.get_score("OXYPHENBUTAZONE")).toEqual(41);
+      })
+
+
+  })
 })
 
 
-
-
-
-
- 
-
-
-   
-
-
-  
-
-
-  
-
-});
