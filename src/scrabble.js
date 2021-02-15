@@ -17,14 +17,20 @@ class Scrabble {
 
     console.log(arr)
     for (; i < len;)  {
+
       console.log(arr[i]) 
 
 
       if(this.onePoint.includes(arr[i])){
         (score+=1);
         console.log(score);
-        i++;
+       
+      } else if(this.twoPoint.includes(arr[i])){
+        (score+=2);
+        console.log(score);
+
       }
+      i++;
     }
 
     return score
