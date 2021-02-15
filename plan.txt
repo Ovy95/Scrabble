@@ -47,35 +47,12 @@ __________________
   AD          3
 __________________
   ADB         6
+__________________
+ADBFKJQ       33
+street        6
+quirky        22
+OXYPHENBUTAZONE 41  
 
 
 
 
-
-  Inputs
-  Rock 
-  Paper 
-  Scissors
-  
-  
-        Outcomes
-            win 
-            draw
-            lose
-
-Player 1     Player 2     outcome 
-
-Rock        Rock          Draw
-Rock        Scissors      Win 
-Rock        Paper         Lose
-
-Player 1 
-{Rock ; {Rock} , Paper :{Paper} , Scissors; {Scissors}}
-
-{Rock ; {Rock; "Draw, Paper;"Cpu wins" Scissors;"Win Player 1"}}
-
-{Paper ; {Rock; "Player 1 wins, Paper;"Draw" Scissors;"Cpu wins"}}
-
-{Scissors ; {Rock; "Cpu win";   Paper;"player 1 wins" Scissors;"Draw"}}
-
-{Rock; }
