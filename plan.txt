@@ -1,0 +1,81 @@
+scrabble = Scrabble.new('')
+scrabble.score # => 0
+
+scrabble = Scrabble.new(" \t\n")
+scrabble.score # => 0
+
+scrabble = Scrabble.new(nil)
+scrabble.score # => 0
+
+scrabble = Scrabble.new('a')
+scrabble.score # => 1
+
+scrabble = Scrabble.new('f')
+scrabble.score # => 4
+
+scrabble = Scrabble.new('street')
+scrabble.score # => 6
+
+scrabble = Scrabble.new('quirky')
+scrabble.score # => 22
+
+scrabble = Scrabble.new('OXYPHENBUTAZONE')
+scrabble.score # => 41
+
+Letter                        	Value
+A, E, I, O, U, L, N, R, S, T  	1
+D, G                          	2
+B, C, M, P	                    3
+F, H, V, W, Y	                  4
+K	                              5
+J, X	                          8
+Q, Z	                          10
+
+input      Output 
+  a           1
+  D           2
+  B           3
+  f           4
+  K           5
+  J           8
+  Q           10
+__________________
+  AA          2
+  AE          2
+__________________
+
+  AD          3
+__________________
+  ADB         6
+
+
+
+
+
+  Inputs
+  Rock 
+  Paper 
+  Scissors
+  
+  
+        Outcomes
+            win 
+            draw
+            lose
+
+Player 1     Player 2     outcome 
+
+Rock        Rock          Draw
+Rock        Scissors      Win 
+Rock        Paper         Lose
+
+Player 1 
+{Rock ; {Rock} , Paper :{Paper} , Scissors; {Scissors}}
+
+{Rock ; {Rock; "Draw, Paper;"Cpu wins" Scissors;"Win Player 1"}}
+
+{Paper ; {Rock; "Player 1 wins, Paper;"Draw" Scissors;"Cpu wins"}}
+
+{Scissors ; {Rock; "Cpu win";   Paper;"player 1 wins" Scissors;"Draw"}}
+
+{Rock; }
