@@ -1,5 +1,5 @@
 class Scrabble {
-
+  
   onePoint = ["A" ,"E", "I", "O", "U", "L", "N", "R", "S", "T"]
   twoPoint = ["D", "G"]
   threePoint = ["B", "C", "M", "P"]
@@ -8,40 +8,30 @@ class Scrabble {
   eightPoint = ["J", "X"]
   tenPoint = ["Q", "Z"]
 
-  get_score(word) {
-  word = word.toUpperCase()
-    var i = 0;
-    var len = word.length;
-
+  get_score_for_letter(letters){
     var score = 0
-    var arr = [...word]
-
-
-    for (; i < len;)  {
-
-      console.log(arr[i]) 
-      if(this.onePoint.includes(arr[i])){
+    for (var i = 0 ; i  < letters.length; i++)  { 
+      if(this.onePoint.includes(letters[i])){
         (score+=1);
-      } else if(this.twoPoint.includes(arr[i])){
+      }else if(this.twoPoint.includes(letters[i])){
         (score+=2);
-      }else if(this.threePoint.includes(arr[i])){
+      }else if(this.threePoint.includes(letters[i])){
         (score+=3);
-      }else if(this.fourPoint.includes(arr[i])){
+      }else if(this.fourPoint.includes(letters[i])){
         (score+=4);
-      }else if(this.fivePoint.includes(arr[i])){
+      }else if(this.fivePoint.includes(letters[i])){
         (score+=5);
-      }else if(this.eightPoint.includes(arr[i])){
+      }else if(this.eightPoint.includes(letters[i])){
         (score+=8);
-      }else if(this.tenPoint.includes(arr[i])){
+      }else if(this.tenPoint.includes(letters[i])){
         (score+=10);
       }
-      i++;
     }
-
     return score
   }
-
-    
-  
-
+    get_score(word) {
+    word = word.toUpperCase()
+    var letters = [...word]
+    return this.get_score_for_letter(letters)
+  }
 }
